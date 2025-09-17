@@ -1,0 +1,543 @@
+body {
+    background-color: #F8F9FA;
+    color: #2C2C2C;
+}
+
+html {
+    scroll-padding-top: 80px;
+    /* Ajusta este valor según la altura de tu header */
+}
+
+/*=========================================================================== CONFIGURACIÓN BOTONES ============================================================================*/
+/*=============================== botones =======================================*/
+.btn {
+    background-color: #000000;
+    color: #ffffff;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+/* ====================================== Efecto para el botón ============================================ */
+.btn-efecto {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    z-index: 1;
+}
+
+.btn-efecto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(146, 143, 143);
+    transition: left 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.btn-efecto:hover::before {
+    left: 0;
+}
+
+.btn-efecto:hover {
+    color: #000000;
+}
+
+/*=================================================================================== HTML HOME =====================================================================================*/
+/*=========================================================================== CONFIGURACIÓN NAV ============================================================================*/
+/*================================================== hacer oscuro el nav ===========================================*/
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+    background-color: rgb(0, 0, 0) !important;
+}
+
+.hero>div {
+    position: relative;
+    z-index: 1;
+}
+
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+.navbar .nav-link:hover {
+    color: #838383 !important;
+}
+
+/*================================================== Sección hero ===========================================*/
+.hero {
+    background-image: url("../img/imagen-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*============================================== sección quienes somos =========================================*/
+.qsomos {
+    background-color: #ffffff;
+    /* Fondo claro */
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.titulo-seccion {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #2c2c2c;
+    letter-spacing: 1px;
+}
+
+.qsomos .container {
+    max-width: 90%;
+    margin-left: 0;
+}
+
+.qsomos h2,
+.qsomos h3,
+.qsomos p {
+    text-align: left;
+}
+
+.qsomos img {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: 350px;
+    object-fit: cover;
+    margin: 20px auto;
+    padding: 24px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .08), transparent);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+
+/*================================================ seccion carrusel ===========================================*/
+.carousel-item {
+    padding: 2rem 0;
+    background-color: #000000;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.carousel-item h3 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.carousel-item p {
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.carousel-item img {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    object-fit: cover;
+    margin: 20px auto;
+    padding: 24px;
+    background: linear-gradient(180deg, rgba(221, 220, 220, 0.418), transparent);
+    border: 1px solid rgba(255, 255, 255, 0.432);
+    border-radius: 8px;
+}
+
+/*================================================ seccion contacto ===========================================*/
+.contacto-bg {
+    background-color: #ffffff;
+}
+
+.btn-enviar {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #7a7a7a;
+    color: #000000;
+}
+
+/*=================================================================================== HTML NOSOTROS =====================================================================================*/
+/*================================================ seccion nav ===========================================*/
+.custom-navbar {
+    background-color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-navbar .nav-link {
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.custom-navbar.scrolled .nav-link {
+    color: black;
+}
+
+.custom-navbar.scrolled .nav-item {
+    border-radius: 20px;
+    margin: 0 5px;
+    padding: 0 10px;
+}
+
+.custom-navbar.scrolled .nav-item:hover {
+    background-color: rgb(228, 227, 227);
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.middle-links {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease-in-out;
+}
+
+.middle-links-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.custom-navbar.scrolled .middle-links {
+    display: flex !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.middle-links .nav-item {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    margin: 0 5px;
+    padding: 0 15px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.middle-links .nav-link {
+    color: white;
+}
+
+.middle-links .nav-item:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*================================================ seccion historia ===========================================*/
+.historia-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background-color: #ffffff;
+}
+
+.historia-titulos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.historia-titulos h4 {
+    cursor: pointer;
+    font-weight: normal;
+    transition: color 0.3s ease, font-weight 0.3s ease, border-color 0.3s ease;
+    border-left: 3px solid transparent;
+    padding-left: 10px;
+}
+
+.historia-titulos h4.active {
+    color: #d4af37;
+    font-weight: bold;
+    border-left: 3px solid #d4af37;
+}
+
+.historia-contenido {
+    flex: 2;
+    position: relative;
+    min-height: 300px;
+}
+
+.historia-item {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    text-align: center;
+}
+
+.historia-item img {
+    display: block;
+    width: 80%;
+    max-width: 500px;
+    height: 350px;
+    object-fit: cover;
+    margin: 20px auto;
+    padding: 24px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .08), transparent);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+
+.historia-item.active {
+    display: block;
+    opacity: 1;
+}
+
+.historia-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*================================================ seccion esencia ===========================================*/
+.esencia-section {
+    background-color: #000000;
+}
+
+#esencia img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    object-fit: cover;
+    margin: 20px auto;
+    padding: 24px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.514), transparent);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    cursor: default;
+}
+
+#esencia img:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+
+/*================================================ seccion equipo ===========================================*/
+#equipo {
+    background-color: #ffffff;
+}
+
+.equipo-carrusel {
+    min-height: 250px;
+    position: relative;
+}
+
+.equipo-item {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.equipo-item.active {
+    display: block;
+    opacity: 1;
+    position: relative;
+}
+
+.equipo-left {
+    animation: slideDown 0.6s ease forwards;
+}
+
+.equipo-right {
+    animation: slideRight 0.6s ease forwards;
+}
+
+.equipo-img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    object-fit: cover;
+    margin: 20px auto;
+    padding: 24px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .08), transparent);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    border-radius: 50%;
+    transition: transform 0.8s ease;
+    cursor: default;
+}
+
+.equipo-img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*=================================================================================== HTML SERVICIOS =====================================================================================*/
+/*================================================ seccion proyectos ===========================================*/
+.servicios {
+    background-color: #ffffff;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card img {
+    height: 180px;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+}
+
+/*================================================ seccion portafolio ===========================================*/
+.portafolio {
+    background-color: #ffffff;
+}
+
+.project-card img {
+    width: 100%;
+    height: 350px; /* Ajusta según tu diseño */
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.btn-outline-primary {
+    padding: 10px 24px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-outline-primary:hover {
+    background-color: #264653;
+    color: #fff;
+    border-color: #264653;
+}
+
+/*================================================ seccion footer ===========================================*/
+.redes {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.redes:hover {
+    transform: scale(1.1);
+}
+
+/*================================================ MEDIA PARA MOVILES ===========================================*/
+@media (max-width: 991px) {
+
+    /* Oculta los enlaces del centro */
+    .middle-links-container {
+        display: none !important;
+    }
+
+    /* Desactiva cápsulas en móvil */
+    .custom-navbar.scrolled .nav-item,
+    .middle-links .nav-item {
+        background-color: transparent !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Asegura que el texto siga viéndose blanco en móvil */
+    .custom-navbar .nav-link {
+        color: white !important;
+    }
+
+    /* Seccion historia en movil */
+    .container.d-flex {
+        flex-direction: column;
+    }
+
+    .historia-titulos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .historia-section {
+        padding-top: 100px;
+        /* ajusta según la altura real del navbar */
+    }
+
+    .historia-titulos {
+        margin-bottom: 1.5rem;
+        /* que no quede tan pegado a la imagen */
+    }
+
+    /* Para que los títulos se vean en columna con más espacio */
+    .historia-titulos h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Opcional: poner los títulos centrados si lo prefieres en mobile */
+    .historia-titulos {
+        text-align: center;
+    }
+}
